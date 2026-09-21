@@ -5,8 +5,11 @@ const Navbar = () => {
     const link = <>
         <li><Link href="/docs">Docs</Link></li>
         <li><Link href="/showcase">Showcase</Link></li>
+        <li><Link href="/blogs">Our Blogs</Link></li>
         <li><Link href="/about">About Us</Link></li>
         <li><Link href="/about/developers">Developers</Link></li>
+        <li><Link href="/dashboard">Dashboard</Link></li>
+        <li><Link href="/users">Users</Link></li>
         
         </>
     return (
