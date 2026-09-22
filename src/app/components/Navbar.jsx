@@ -1,17 +1,22 @@
+'use client'
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'
 import React from 'react';
 
 const Navbar = () => {
+    const pathname = usePathname()
     const link = <>
-        <li><Link href="/docs">Docs</Link></li>
-        <li><Link href="/showcase">Showcase</Link></li>
-        <li><Link href="/blogs">Our Blogs</Link></li>
-        <li><Link href="/about">About Us</Link></li>
-        <li><Link href="/about/developers">Developers</Link></li>
-        <li><Link href="/dashboard">Dashboard</Link></li>
-        <li><Link href="/users">Users</Link></li>
-        
-        </>
+        <li><Link className={` ${pathname === '/docs' ? ' text-blue-700' : ''}`} href="/docs">Docs</Link></li>
+        <li><Link className={` ${pathname === '/showcase' ? ' text-blue-700' : ''}`} href="/showcase">Showcase</Link></li>
+        <li><Link className={` ${pathname === '/blogs' ? ' text-blue-700' : ''}`} href="/blogs">Our Blogs</Link></li>
+        <li><Link className={` ${pathname === '/about' ? ' text-blue-700' : ''}`} href="/about">About Us</Link></li>
+        <li> <Link className={`${pathname === '/about/developers' ? 'text-blue-700' : ''}`}  href="/about/developers"
+        > Developers  </Link></li>
+        <li><Link className={` ${pathname === '/dashboard' ? ' text-blue-700' : ''}`} href="/dashboard">Dashboard</Link></li>
+        <li><Link className={` ${pathname === '/users' ? ' text-blue-700' : ''}`} href="/users">Users</Link></li>
+
+    </>
     return (
         <div>
             <div className="navbar bg-base-100 shadow-sm">
